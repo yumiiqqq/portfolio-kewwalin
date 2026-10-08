@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* ใส่ที่อยู่ของไฟล์รูปภาพใน url('...') */
+    background-image: url('bg.jpg'); 
+
+    /* จัดรูปให้อยู่ตรงกลาง */
+    background-position: center; 
+
+    /* ไม่ให้รูปภาพซ้ำกัน */
+    background-repeat: no-repeat; 
+
+    /* ปรับขนาดรูปภาพให้ครอบคลุมเต็มหน้าจอ */
+    background-size: cover; 
+
+    /* ล็อกรูปพื้นหลังให้อยู่กับที่เวลาเลื่อนสกอร์บาร์ (เลือกใส่หรือไม่ใส่ก็ได้) */
+    background-attachment: fixed; 
+
+    margin: 0;
+    padding: 30px 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    background: #fffef5;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+#top {
+    text-align: center;
+    color: #E8ABB5;
+    margin-top: 0;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 15px 0;
+}
+
+.post-box, .reply-box {
+    min-height: 45px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    word-break: break-word;
+    font-size: 15px;
+}
+
+#topic {
+    background-color: #FFF8F8;
+    border-left: 4px solid #FADCDC;
+    font-weight: 600; /* หรือลบบรรทัดนี้ออก */
+    color: #928880;
+}
+
+.reply-box {
+    background-color: #FFF8F8;
+    border-left: 4px solid #FADCDC;
+    font-weight: 600; /* กำหนดให้ตัวอักษรไม่หนาเหมือนกัน */
+    color: #928880; /* เปลี่ยนเป็นสีเดียวกับ #topic */
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+textarea#message {
+    width: 100%;
+    height: 90px;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    resize: vertical;
+    font-size: 14px;
+    outline: none;
+}
+
+textarea#message:focus {
+    border-color: #3b82f6;
+}
+
+.btn-group {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#postBtn {
+    background-color: #DDD8D2;
+    color: #916848;
+}
+
+#postBtn:hover {
+    background-color: #DDD8D2;
+}
+
+#clearBtn {
+    background-color: #DEE2EB;
+    color: #475569;
+}
+
+#clearBtn:hover {
+    background-color: #DEE2EB;
+}
