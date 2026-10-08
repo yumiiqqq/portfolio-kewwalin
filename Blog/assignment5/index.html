@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blogger</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <!-- หัวข้อหน้าเว็บ โดนเขียนทับด้วย JS ตอน window.onload -->
+        <h1 id="top"></h1>
+        <hr>
+
+        <!-- กล่องแสดงข้อความที่โพสต์ -->
+        <div class="post-box" id="topic"></div>
+        <hr>
+        <div class="reply-box" id="reply1"></div>
+        <hr>
+        <div class="reply-box" id="reply2"></div>
+        <hr>
+
+        <!-- ฟอร์มสำหรับพิมพ์และปุ่มกด -->
+        <div class="form-group">
+            <textarea name="message" id="message" placeholder="พิมพ์ข้อความที่นี่..."></textarea>
+            <br>
+            <div class="btn-group">
+                <button type="button" id="postBtn">Post</button>
+                <button type="button" id="clearBtn">Clear</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

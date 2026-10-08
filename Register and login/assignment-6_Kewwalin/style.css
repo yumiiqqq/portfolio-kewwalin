@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* ดึงรูปภาพพื้นหลัง wpp.png */
+    background-image: url('wpp.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* คอนเทนเนอร์การ์ดโปร่งแสงเล็กน้อยให้เข้ากับพื้นหลัง */
+.container {
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 440px;
+    padding: 30px 35px;
+}
+
+/* ฟอร์ม Login ขนาดกะทัดรัด */
+.login-box {
+    max-width: 380px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-size: 26px;
+    font-weight: 700;
+    color: #4a4a68;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 13px;
+    color: #8c8ca1;
+    margin-bottom: 12px;
+}
+
+/* ข้อความแจ้งเตือน Error */
+#errormsg {
+    display: block;
+    color: #e84118;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    min-height: 18px;
+    margin-bottom: 12px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #57606f;
+    margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1.5px solid #dcdde1;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #a6c1ee;
+    box-shadow: 0 0 0 3px rgba(166, 193, 238, 0.35);
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    padding: 5px 0;
+    font-size: 14px;
+    color: #57606f;
+}
+
+.radio-group label {
+    display: inline;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* กลุ่มปุ่มกด */
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s ease, filter 0.2s ease;
+}
+
+input[type="submit"] {
+    background-color: #FFBBDA;
+    color: #ffffff;
+}
+
+input[type="reset"] {
+    background-color: #f1f2f6;
+    color: #747d8c;
+}
+
+input[type="submit"]:hover {
+    filter: brightness(0.95);
+}
+
+input[type="submit"]:active,
+input[type="reset"]:active {
+    transform: scale(0.98);
+}
+
+.footer-link {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 13px;
+    color: #747d8c;
+}
+
+.footer-link a {
+    color: #FFBBDA;
+    text-decoration: none;
+    font-weight: bold;
+}
