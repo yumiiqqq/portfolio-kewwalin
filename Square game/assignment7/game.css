@@ -1,0 +1,206 @@
+/* =============================================================================
+   MDT312 Assignment 7: Square Game Styling
+   ============================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background: radial-gradient(circle at top, #FFF8F8, #EED6D3);
+    min-height: 100vh;
+    padding: 40px 15px;
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Control Panel */
+fieldset {
+    width: 100%;
+    max-width: 520px;
+    background: #ECF8F8;
+    backdrop-filter: blur(12px);
+    border: 2px solid #DADBD6;
+    border-radius: 16px;
+    box-shadow: none;
+    padding: 22px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+legend {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    color: #B2967D;
+    padding: 4px 14px;
+    background: #FFF8F8;
+    border: 1px solid #F3D8D1;
+    border-radius: 999px;
+    margin-bottom: 6px;
+}
+
+label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #B2967D;
+}
+
+input[type="text"] {
+    width: 70px;
+    padding: 8px 12px;
+    background: #FFF8F8;
+    color: #B2967D;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    text-align: center;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #B2967D;
+    box-shadow: 0 0 0 3px rgba(186, 195, 199, 0.2);
+}
+
+select {
+    padding: 8px 14px;
+    background: #FFF8F8;
+    color: #B2967D;
+    border: 1.5px none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+select:focus {
+    border-color: #B2967D;
+}
+
+button#start {
+    padding: 9px 22px;
+    background: #FFF8F8;
+    color: #B2967D;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 4px 14px #FFF8F8;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button#start:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px #FFF8F8;
+}
+
+button#start:active {
+    transform: translateY(0);
+}
+
+/* Timer Display */
+#timerClock {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #B2967D;
+    margin-left: auto;
+}
+
+#clock {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 36px;
+    background: #FFF8F8;
+    color: #928880;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #FFF8F8;
+    padding: 0 10px;
+}
+
+/* Play Area Container */
+#container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#layer {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: #ECF8F8;
+    border: 2px solid #DADBD6;
+    border-radius: 16px;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+/* Square Elements */
+.square {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+    cursor: crosshair;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    transition: transform 0.12s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.12s ease;
+    animation: popIn 0.2s ease-out;
+}
+
+.square:hover {
+    transform: scale(1.35);
+    filter: brightness(1.25);
+    z-index: 10;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Colors */
+.maroon {
+    background: linear-gradient(135deg, #bbd6fa, #a2daf0);
+    border: 1px solid #7ebaf3;
+}
+
+.lightgreen {
+    background: linear-gradient(135deg, #d9fce6, #aeffcb);
+    border: 1px solid #9cd6b1;
+}
+
+.magenta {
+    background: linear-gradient(135deg, #ffdaed, #efadf5);
+    border: 1px solid #d8b9cb;
+}
